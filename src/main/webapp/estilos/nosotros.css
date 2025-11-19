@@ -1,0 +1,273 @@
+:root {
+  --green: #2e8b57;
+  --green-light: #e0f7e9;
+  --blue: #87ceeb;
+}
+
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f5f5f5; }
+
+/* NAV */
+nav {
+  background: var(--green);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 30px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav .nav-left { font-size: 1.4rem; font-weight: bold; display: flex; gap: 8px; color: #ffffff; }
+nav .nav-center { display: flex; gap: 15px; }
+nav .nav-center a {
+  padding: 10px 16px;
+  background: white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #004d66;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+nav .nav-center a:hover { background: var(--green); color: white; transform: translateY(-3px); }
+
+.banner-nosotros {
+  height: 100vh;
+  background-image: url('https://herramientas-ia.com/wp-content/uploads/2024/11/prompts-para-crear-disenos-de-parques-ecologicos-con-ia.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* efecto parallax */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 60px;
+  position: relative;
+  color: white;
+  transition: background-image 1s ease-in-out;
+}
+
+.banner-nosotros::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.banner-text {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.banner-text h1 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.banner-text p {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+
+
+
+/* BLOQUES SECCIONES - FULL WIDTH */
+/* BLOQUES SECCIONES - FULL WIDTH */
+section.fullwidth {
+  width: 100%;
+  padding: 50px 20px;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: #fff;
+}
+/* TITULOS */
+section h1, section h2 {
+  color: var(--green);
+  margin-bottom: 20px;
+}
+section h1 { 
+  font-size: 4rem;  /* título principal más grande */
+}
+section h2 {
+  color: var(--green);
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+section p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+section ul li {
+  background: var(--green-light);
+  width: 360px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+  flex-direction: column;
+  font-size: 1.3rem; /* texto dentro de cuadrados más grande */
+}
+
+section ul li:hover {
+  background: var(--green);
+  color: white;
+  transform: translateY(-5px);
+}
+
+/* VALORES en cuadrados en fila */
+section.valores ul {
+  display: flex;
+  justify-content: center; /* centrado horizontal */
+  gap: 30px; /* espacio entre cuadrados */
+  padding-left: 0;
+  flex-wrap: wrap; /* se ajusta en móviles */
+}
+
+section.valores ul li {
+  background: var(--green-light);
+  width: 360px;  /* tamaño grande */
+  height: 360px; /* tamaño grande */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+  flex-direction: column; /* título arriba, texto abajo */
+}
+
+section.valores ul li:hover {
+  background: var(--green);
+  color: white;
+  transform: translateY(-5px);
+}
+/* BITÁCORA */
+section.bitacora {
+  background: #f0f8f5;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+section.bitacora h2 {
+  color: var(--green);
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+/* UL centrado horizontalmente en una sola fila */
+section.bitacora ul {
+  display: flex;               /* fila horizontal */
+  flex-direction: row;         /* asegurar horizontalidad */
+  justify-content: center;     /* centra todos los li */
+  align-items: center;         /* centra verticalmente si hay altura diferente */
+  gap: 20px;                   /* espacio entre bloques */
+  padding-left: 0;
+  margin: 0 auto;              /* centra el contenedor */
+  list-style: none;
+  flex-wrap: nowrap;           /* NO permite que se vaya a la siguiente línea */
+}
+
+section.bitacora ul li {
+  background: var(--green-light);
+  width: 180px;                /* ancho fijo */
+  height: 120px;               /* altura fija */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+section.bitacora ul li:hover {
+  background: var(--green);
+  color: white;
+  transform: translateY(-5px);
+}
+
+/* Responsive Bitácora */
+@media screen and (max-width: 1200px) {
+  section.bitacora ul li {
+    width: 150px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  section.bitacora ul {
+    flex-wrap: wrap;          /* permite que se vaya a otra fila en pantallas pequeñas */
+  }
+  section.bitacora ul li {
+    width: 45%;               /* ocupa casi la mitad del contenedor */
+    margin-bottom: 15px;
+  }
+}
+
+
+
+/* CONTACTO */
+section.contacto p {
+  font-size: 1.5rem; /* texto de contacto más grande */
+}
+
+/* Ajuste responsive */
+@media screen and (max-width: 1200px) {
+  section.valores ul li {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 800px) {
+  section.valores ul {
+    flex-direction: column; /* se apilan en móvil */
+    gap: 20px;
+  }
+  section.valores ul li {
+    width: 100%;
+    height: auto;
+    padding: 25px;
+  }
+}
+
+
+/* Ajuste responsive */
+@media screen and (max-width: 800px) {
+  section.valores ul {
+    grid-template-columns: 1fr; /* apila los cuadrados en móvil */
+    max-width: 100%;
+  }
+  section.valores ul li {
+    width: 100%;
+    height: auto; /* se ajusta al contenido */
+    padding: 25px;
+  }
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .parallax {
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .parallax-text { text-align: center; max-width: 90%; }
+  section.fullwidth { padding: 30px 15px; }
+}
+

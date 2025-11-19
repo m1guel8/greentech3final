@@ -1,0 +1,211 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* logo izq + menú centro + espacio der */
+  align-items: center;
+  background: #2e8b57;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: relative;
+}
+/* Logo */
+.navbar .logo {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.navbar li{
+  background-color: #ffffff;
+}
+
+/* Menú centrado */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  position: absolute; 
+  left: 50%; 
+  transform: translateX(-50%);
+}
+
+.navbar a {
+  color: #000000; /* color más suave que blanco */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.navbar a:hover {
+  color: #ffffff; /* un hover más suave */
+  text-decoration: underline;
+}
+
+/* Layout principal */
+.dashboard {
+  display: grid;
+  grid-template-columns: 250px 1fr 350px;
+  grid-template-rows: calc(100vh - 60px); /* altura total menos navbar */
+  grid-template-areas: "parques mapa panel";
+  gap: 15px;
+  padding: 15px;
+  height: calc(100vh - 60px);
+  box-sizing: border-box;
+}
+
+/* Cards flotantes */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card ,#parques{
+  background: #2e8b57;
+}
+.card, #mapa, #panel, #estadisticas, #ultimos-datos {
+  background: #f7f9f7; /* color más suave para la vista */
+}
+
+/* Secciones */
+#parques {
+  grid-area: parques;
+  overflow-y: auto;
+}
+
+#mapa {
+  grid-area: mapa;
+  height: 94%;
+  width: 96%;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 8px;
+}
+
+#panel {
+  grid-area: panel;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  gap: 15px;
+}
+
+#estadisticas {
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+#ultimos-datos {
+  padding-top: 10px;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 8px;
+  margin: 5px 0;
+  background: #c8e6c9;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+li:hover {
+  background: #2e8b57;
+}
+
+/* Responsive: móvil y tablets */
+@media (max-width: 992px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "parques"
+      "mapa"
+      "panel";
+    height: auto;
+  }
+
+  .navbar ul {
+    position: static;
+    transform: none;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  #panel {
+    grid-template-rows: auto auto;
+  }
+}
+/* Botón de modo oscuro */
+#toggle-theme {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: 0.3s;
+}
+
+#toggle-theme:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 🌙 Dark Mode */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+  background: #1b5e20;
+}
+
+body.dark-mode .navbar a {
+  color: #e0f2f1;
+}
+
+body.dark-mode .card,
+body.dark-mode #parques,
+body.dark-mode #mapa,
+body.dark-mode #panel,
+body.dark-mode #estadisticas,
+body.dark-mode #ultimos-datos {
+  background: #1e1e1e;
+  color: #f0f0f0;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode li {
+  background: #2e7d32;
+  color: #ffffff;
+}
+
+body.dark-mode li:hover {
+  background: #1b5e20;
+}
