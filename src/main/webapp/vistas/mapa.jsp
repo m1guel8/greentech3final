@@ -37,10 +37,11 @@
 		<aside id="parques" class="card">
 			<h2>📍 Parques con dispositivos</h2>
 			<ul>
-				<li data-lat="-34.6037" data-lng="-58.3816">Parque Central</li>
-				<li data-lat="-34.6090" data-lng="-58.3775">Parque Norte</li>
-				<li data-lat="-34.6150" data-lng="-58.3850">Plaza Verde</li>
-				<li data-lat="-34.6200" data-lng="-58.3900">Reserva Sur</li>
+		
+				<li data-lat="-34.6723227253168" data-lng="-58.45065990431022">Parque de la Ciudad</li>
+				<li data-lat="-34.66256625077189" data-lng="-58.46001307103311">Lago Soldati</li>
+				<li data-lat="-34.6173562514377" data-lng="-58.433078193753445">Parque Rivadavia</li>
+				<li data-lat="-34.582313751154864" data-lng="-58.418489942034554">Jardin Botanico</li>
 			</ul>
 		</aside>
 
@@ -59,7 +60,7 @@
 <div id="ultimos-datos">
   <h3>Últimos Datos</h3>
   
-  <a href="${pageContext.request.contextPath}/CrearDatos">Probar datos</a>
+  <a href="${pageContext.request.contextPath}/MostrarMapa">Probar datos</a>
   
   <%
     ResultSet conjuntoResultados = (ResultSet) request.getAttribute("conjuntoResultados");

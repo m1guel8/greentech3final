@@ -22,11 +22,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Marcadores iniciales
 var markers = {
-  "Parque Central": L.marker([-34.6037, -58.3816]).addTo(map).bindPopup("Parque Central - Robot activo"),
-  "Parque Norte": L.marker([-34.6090, -58.3775]).addTo(map).bindPopup("Parque Norte - Robot activo"),
-  "Plaza Verde": L.marker([-34.6150, -58.3850]).addTo(map).bindPopup("Plaza Verde - Robot activo"),
-  "Reserva Sur": L.marker([-34.6200, -58.3900]).addTo(map).bindPopup("Reserva Sur - Robot activo"),
-};
+  "Parque Central": L.marker([-34.6723227253168, -58.45065990431022]).addTo(map).bindPopup("Parque de la ciudad - Robot activo"),
+  "Parque Norte": L.marker([-34.66256625077189, -58.46001307103311]).addTo(map).bindPopup("Lago Soldati - Robot activo"),
+  "Plaza Verde": L.marker([-34.6173562514377, -58.433078193753445]).addTo(map).bindPopup("Parque Rivadavia - Robot activo"),
+  "Reserva Sur": L.marker([-34.582313751154864, -58.418489942034554]).addTo(map).bindPopup("Jardin Botanico  - Robot activo"),
+}; 
 
 // Evento: clic en la lista de parques
 document.querySelectorAll("#parques li").forEach(li => {
