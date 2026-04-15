@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.sql.*" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.sql.*"%>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -37,11 +37,14 @@
 		<aside id="parques" class="card">
 			<h2>📍 Parques con dispositivos</h2>
 			<ul>
-		
-				<li data-lat="-34.6723227253168" data-lng="-58.45065990431022">Parque de la Ciudad</li>
-				<li data-lat="-34.66256625077189" data-lng="-58.46001307103311">Lago Soldati</li>
-				<li data-lat="-34.6173562514377" data-lng="-58.433078193753445">Parque Rivadavia</li>
-				<li data-lat="-34.582313751154864" data-lng="-58.418489942034554">Jardin Botanico</li>
+		<!--   "Jardin Fatima": L.marker([-34.65858983147939, -58.44706171190579]).addTo(map).bindPopup("Parque de la ciudad - Robot activo"),
+  "Primaria Fatima": L.marker([-34.658276684249586, -58.44663533205027]).addTo(map).bindPopup("Lago Soldati - Robot activo"),
+  "Secundaria Fatima": L.marker([-34.65929417210582, -58.448045950996615]).addTo(map).bindPopup("Parque Rivadavia - Robot activo"),
+  "Terciario Fatima": L.marker([-34.6596806197795, -58.44866396033214]).addTo(map).bindPopup("Jardin Botanico  - Robot activo"), -->
+				<li data-lat="-34.65858983147939" data-lng="-58.44706171190579">Parque de la Ciudad</li>
+				<li data-lat="-34.658276684249586" data-lng="-58.44663533205027">Lago Soldati</li>
+				<li data-lat="-34.65929417210582" data-lng="-58.448045950996615">Parque Rivadavia</li>
+				<li data-lat="-34.6596806197795" data-lng="-58.44866396033214">Jardin Botanico</li>
 			</ul>
 		</aside>
 

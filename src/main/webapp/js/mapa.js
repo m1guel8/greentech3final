@@ -22,10 +22,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Marcadores iniciales
 var markers = {
-  "Parque Central": L.marker([-34.6723227253168, -58.45065990431022]).addTo(map).bindPopup("Parque de la ciudad - Robot activo"),
-  "Parque Norte": L.marker([-34.66256625077189, -58.46001307103311]).addTo(map).bindPopup("Lago Soldati - Robot activo"),
-  "Plaza Verde": L.marker([-34.6173562514377, -58.433078193753445]).addTo(map).bindPopup("Parque Rivadavia - Robot activo"),
-  "Reserva Sur": L.marker([-34.582313751154864, -58.418489942034554]).addTo(map).bindPopup("Jardin Botanico  - Robot activo"),
+  "Jardin Fatima": L.marker([-34.65858983147939, -58.44706171190579]).addTo(map).bindPopup("Parque de la ciudad - Robot activo"),
+  "Primaria Fatima": L.marker([-34.658276684249586, -58.44663533205027]).addTo(map).bindPopup("Lago Soldati - Robot activo"),
+  "Secundaria Fatima": L.marker([-34.65929417210582, -58.448045950996615]).addTo(map).bindPopup("Parque Rivadavia - Robot activo"),
+  "Terciario Fatima": L.marker([-34.6596806197795, -58.44866396033214]).addTo(map).bindPopup("Jardin Botanico  - Robot activo"),
 }; 
 
 // Evento: clic en la lista de parques
